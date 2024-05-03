@@ -1,3 +1,5 @@
+
+
 body {
    background-color: white;
    font-family: 'Montserrat';
@@ -19,7 +21,6 @@ header {
     justify-content: space-between ;
     padding: 16px;
     height: 100%;
-    
     position:relative;
     
 }
@@ -44,9 +45,8 @@ header a:hover {
 }
 
 .titolo {
-   
-    font-size : 36px;
-    line-height: 1.1;
+    
+    
     padding: 130px 20px;
     background-color: black;
     
@@ -62,11 +62,14 @@ section.titolo h1 {
 section.titolo p {
     color: white;
     margin-left: 24px;
+    font-size : 36px;
+    line-height: 1.1;
 }
 
 .paragrafo {
+    
     padding: 130px 20px;
-   width: 800px;
+    max-width: 800px;
     font-size: 20px;
     margin-left: 24px;
    
@@ -155,22 +158,26 @@ section.titolo2 h1 {
 
 .paragrafo2 {
     padding: 130px 20px;
-   width: 800px;
+   max-width: 800px;
     font-size: 20px;
     margin-left: 24px;
     
 }
 .hero {
-    display: flex;
-    font-size : 36px;
-    line-height: 1.1;
-    padding: 130px 20px;
+    display: grid;
+    
+    margin: auto;
+    
+    grid-template-columns: 2fr 1fr;
+    gap: 128px;
+    
     background-color: #80223E;
     
     
 }
 
 .hero h1 {
+    padding: 250px 24px;
     font-size: 68px;
     color: white;
     font-family: 'Chonburi'; 
@@ -179,11 +186,8 @@ section.titolo2 h1 {
 
 
 .hero img {
-    height:45.5% ;
-    position: absolute;
-    margin: auto;
-    right: 0;
-    top: 59px;
+   height: 100%;
+    
     
 }
 
@@ -222,6 +226,10 @@ section.titolo3 h1 {
 }
 
 .titolo4 {
+    display: grid; 
+    margin: auto;
+    grid-template-columns: 2fr 1fr;
+    gap: 128px;
     background-color: #0862CC;
     color: #fff;
     font-size: 36px;
@@ -234,12 +242,7 @@ section.titolo3 h1 {
     font-family: 'Chonburi'; 
     margin-left: 24px;
 }
-.titolo4 p {
-    position: absolute;
-    margin: auto;
-    right: 50px;
-    top: 140px;
-}
+
  .mappa {
     padding: 130px 20px;
     font-size: 20px;
@@ -257,13 +260,11 @@ section.titolo3 h1 {
 }
 
 .laboratorio {
-   
-   
     font-size: 20px;
     background-color: #0862CC;
     color: #fff;
-    padding-bottom: 300px;
-    margin-bottom: 50px;
+    padding-bottom: 30px;
+    
 }
 .laboratorio h1{
     font-size: 36px;
@@ -272,20 +273,20 @@ section.titolo3 h1 {
     padding-top: 70px;
     margin-left: 50px;
 }
+.lab {
+    display: grid; 
+    margin: auto;
+    grid-template-columns: 2fr 1fr;
+    gap: 128px;
+}
 
 .laboratorio p {
     margin-left: 50px;
-   width: 800px;
+   max-width: 800px;
 }
 
-.laboratorio img {
-    
-    position: absolute;
-    margin: auto;
-    right: 100px;
-    top: 1500px;
-    width: 400px;
-}
+
+
 
 footer {
     display: flex;
@@ -304,6 +305,26 @@ footer nav ul {
 footer a {
     color: black;
     text-decoration: none;
+    
+}
+
+@media (max-width:600px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .titolo4 {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .titolo4 p {
+        margin-left: 24px;
+     }
+     
+    .lab {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
     
 }
 
